@@ -16,37 +16,6 @@
       setTheme(next);
       localStorage.setItem(themeKey, next);
     });
-
-  // Explicit handler for the About Me button (not an anchor)
-  const aboutBtn = document.getElementById('homeAboutBtn');
-  if (aboutBtn) {
-    aboutBtn.addEventListener('click', () => {
-      const sec = document.getElementById('home-about');
-      if (!sec) return;
-      const isOpen = sec.classList.toggle('is-open');
-      if (isOpen) {
-        sec.style.maxHeight = sec.scrollHeight + 'px';
-        aboutBtn.setAttribute('aria-expanded', 'true');
-        sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } else {
-        sec.style.maxHeight = '';
-        aboutBtn.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
-
-  // If URL hash is #home-about, open the collapsible on load
-  window.addEventListener('load', () => {
-    if (location.hash === '#home-about') {
-      const sec = document.getElementById('home-about');
-      if (sec) {
-        sec.classList.add('is-open');
-        sec.style.maxHeight = sec.scrollHeight + 'px';
-        const trigger = document.querySelector('a[data-toggle="home-about"]');
-        if (trigger) trigger.setAttribute('aria-expanded', 'true');
-      }
-    }
-  });
   }
 
   // Smooth scroll for same-page anchors
@@ -54,23 +23,7 @@
     const a = e.target.closest('a[href^="#"]');
     if (!a) return;
     const id = a.getAttribute('href').slice(1);
-    // If this is the home-about toggle, handle collapsible behavior
-    if (a.dataset.toggle === 'home-about') {
-      const sec = document.getElementById(id);
-      if (!sec) return;
-      e.preventDefault();
-      const isOpen = sec.classList.toggle('is-open');
-      // Height animation
-      if (isOpen) {
-        sec.style.maxHeight = sec.scrollHeight + 'px';
-        sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        a.setAttribute('aria-expanded', 'true');
-      } else {
-        sec.style.maxHeight = '';
-        a.setAttribute('aria-expanded', 'false');
-      }
-      return;
-    }
+    // Normal in-page anchor behavior
     const el = document.getElementById(id);
     if (!el) return;
     e.preventDefault();
