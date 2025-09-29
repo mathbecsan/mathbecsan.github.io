@@ -61,19 +61,39 @@
     }));
   }
 
-  // Contact form validation
+  // Contact form validation (basic example)
   const form = document.getElementById('contactForm');
   if (form) {
-    const name = form.querySelector('#name');
-    const email = form.querySelector('#email');
-    const message = form.querySelector('#message');
-    const nameError = form.querySelector('#nameError');
+    // Dynamic project types via segmented toggle
+    const segWrap = document.querySelector('.segmented');
+    const segBtns = segWrap ? segWrap.querySelectorAll('.seg') : [];
+    const projectType = document.getElementById('projectType');
+    const designTypes = ['Product Design','UX Research','Mobile App Design','Web Design','Brand Identity','Design System','Other'];
+    const techTypes = ['Web App Development','Prototype/PoC','Data & AI','Automation','Accessibility Audit','Performance','Other'];
+    const setOptions = (arr) => {
+      if (!projectType) return;
+      projectType.innerHTML = '<option value="" selected>Select project type</option>' + arr.map(t => `<option value="${t}">${t}</option>`).join('');
+    };
+    if (segBtns.length) {
+      setOptions(designTypes);
+      segBtns.forEach(btn => btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        segBtns.forEach(b => b.setAttribute('aria-selected', 'false'));
+        btn.setAttribute('aria-selected', 'true');
+        const mode = btn.dataset.mode;
+        setOptions(mode === 'tech' ? techTypes : designTypes);
+      }));
+    }
+
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const message = document.getElementById('message');
+    const nameError = document.getElementById('nameError');
     const emailError = form.querySelector('#emailError');
     const messageError = form.querySelector('#messageError');
     const status = form.querySelector('#formStatus');
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       let ok = true;
