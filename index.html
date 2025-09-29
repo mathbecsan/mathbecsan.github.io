@@ -37,7 +37,7 @@
         <p class="lead max-60ch">Junior in Symbolic Systems @ Stanford focusing on Human‑Centered AI, exploring the intersection of data science, design, and inclusive technology.</p>
         <div class="actions">
           <a class="btn btn-primary" href="work.html">View My Work</a>
-          <a class="btn btn-ghost" href="#home-about" data-toggle="home-about">About Me</a>
+          <a class="btn btn-ghost" href="#home-about" data-toggle="home-about" aria-controls="home-about" aria-expanded="false" role="button">About Me</a>
         </div>
       </div>
     </section>
@@ -51,16 +51,25 @@
         </header>
         <div class="grid gallery-3" data-reveal>
           <figure class="gallery-card">
-            <img src="assets/gallery-1.svg" alt="Collaboration and project work" />
-            <figcaption>Collaboration</figcaption>
+            <picture>
+              <source srcset="assets/about-research.jpg" type="image/jpeg">
+              <img src="assets/gallery-1.svg" alt="Research presentation and public speaking" />
+            </picture>
+            <figcaption>Research Presentation</figcaption>
           </figure>
           <figure class="gallery-card">
-            <img src="assets/gallery-2.svg" alt="Coding and design projects" />
-            <figcaption>Code + Design</figcaption>
+            <picture>
+              <source srcset="assets/about-programming.jpg" type="image/jpeg">
+              <img src="assets/gallery-2.svg" alt="Programming and design collaboration" />
+            </picture>
+            <figcaption>Programming</figcaption>
           </figure>
           <figure class="gallery-card">
-            <img src="assets/gallery-3.svg" alt="Talks, conferences, and community" />
-            <figcaption>Talks + Community</figcaption>
+            <picture>
+              <source srcset="assets/about-language.jpg" type="image/jpeg">
+              <img src="assets/gallery-3.svg" alt="Language revitalization and fieldwork" />
+            </picture>
+            <figcaption>Language Revitalization</figcaption>
           </figure>
         </div>
       </div>

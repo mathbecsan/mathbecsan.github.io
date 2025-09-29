@@ -16,6 +16,19 @@
       setTheme(next);
       localStorage.setItem(themeKey, next);
     });
+
+  // If URL hash is #home-about, open the collapsible on load
+  window.addEventListener('load', () => {
+    if (location.hash === '#home-about') {
+      const sec = document.getElementById('home-about');
+      if (sec) {
+        sec.classList.add('is-open');
+        sec.style.maxHeight = sec.scrollHeight + 'px';
+        const trigger = document.querySelector('a[data-toggle="home-about"]');
+        if (trigger) trigger.setAttribute('aria-expanded', 'true');
+      }
+    }
+  });
   }
 
   // Smooth scroll for same-page anchors
@@ -33,8 +46,10 @@
       if (isOpen) {
         sec.style.maxHeight = sec.scrollHeight + 'px';
         sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        a.setAttribute('aria-expanded', 'true');
       } else {
         sec.style.maxHeight = '';
+        a.setAttribute('aria-expanded', 'false');
       }
       return;
     }

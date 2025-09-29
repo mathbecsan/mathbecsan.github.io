@@ -77,7 +77,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Hero */
 .hero { position: relative; overflow: clip; }
-.hero__bg { position: absolute; inset: 0; background: linear-gradient(135deg, color-mix(in oklab, var(--primary) 30%, transparent), transparent), radial-gradient(1200px 600px at 20% 0%, color-mix(in oklab, var(--secondary) 25%, transparent), transparent); filter: blur(40px) saturate(120%); opacity: 0.35; }
+.hero__bg { position: absolute; inset: 0; background: linear-gradient(135deg, color-mix(in oklab, var(--primary) 30%, transparent), transparent), radial-gradient(1200px 600px at 20% 0%, color-mix(in oklab, var(--secondary) 25%, transparent), transparent); filter: blur(40px) saturate(120%); opacity: 0.35; z-index: 0; pointer-events: none; }
+.hero .container { position: relative; z-index: 1; }
 .actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
 /* Buttons */
