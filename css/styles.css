@@ -60,6 +60,7 @@ img { max-width: 100%; height: auto; display: block; }
   backdrop-filter: blur(10px);
   background: color-mix(in oklab, var(--bg) 85%, transparent);
   border-bottom: 1px solid var(--border);
+  padding-left: 64px; /* move avatar ~2-3cm to the right on typical displays */
 }
 .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: var(--text); text-decoration: none; }
 .site-nav { display: flex; gap: 20px; flex: 1; justify-content: center; }
@@ -155,6 +156,7 @@ img { max-width: 100%; height: auto; display: block; }
   .about-grid { grid-template-columns: 1fr; }
   .gallery-3 { grid-template-columns: 1fr; }
   .site-header { flex-wrap: wrap; row-gap: 10px; }
+  .site-header { padding-left: 16px; }
   .site-nav { order: 3; justify-content: flex-start; }
   .header-socials { order: 2; }
 }
