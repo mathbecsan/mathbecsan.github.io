@@ -88,7 +88,7 @@
       if (!ok) return;
 
       // Since this is a static site, simulate a successful submit
-      status.textContent = 'Thanks! Your message was validated locally. Please email me directly at hello@example.com.';
+      status.textContent = 'Thanks! Your message was validated locally. Please email me directly at mathbecsan@gmail.com.';
       form.reset();
     });
   }
