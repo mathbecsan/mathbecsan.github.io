@@ -17,6 +17,24 @@
       localStorage.setItem(themeKey, next);
     });
 
+  // Explicit handler for the About Me button (not an anchor)
+  const aboutBtn = document.getElementById('homeAboutBtn');
+  if (aboutBtn) {
+    aboutBtn.addEventListener('click', () => {
+      const sec = document.getElementById('home-about');
+      if (!sec) return;
+      const isOpen = sec.classList.toggle('is-open');
+      if (isOpen) {
+        sec.style.maxHeight = sec.scrollHeight + 'px';
+        aboutBtn.setAttribute('aria-expanded', 'true');
+        sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        sec.style.maxHeight = '';
+        aboutBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
   // If URL hash is #home-about, open the collapsible on load
   window.addEventListener('load', () => {
     if (location.hash === '#home-about') {
