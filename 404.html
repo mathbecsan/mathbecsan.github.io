@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Mathias Becerra</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    main { min-height: 60vh; display: grid; place-items: center; }
+    .stack { display: grid; gap: 1rem; text-align: center; }
+    .muted { color: #666; }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <a class="brand" href="/">
+      <img src="assets/logo.png" alt="Mathias Becerra logo" width="28" height="28" />
+      <span>Mathias Becerra</span>
+    </a>
+  </header>
+  <main>
+    <div class="stack">
+      <h1>404 — Page not found</h1>
+      <p class="muted">The page you’re looking for doesn’t exist or has moved.</p>
+      <p><a class="btn btn-primary" href="/">Go home</a></p>
+    </div>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year"></span> Mathias Becerra</p>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
