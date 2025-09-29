@@ -23,43 +23,113 @@
       <a href="work.html">Work</a>
       <a href="contact.html" class="active">Contact</a>
     </nav>
+    <div class="header-socials" aria-label="Social links">
+      <a href="https://www.linkedin.com/in/mathbecsan/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="assets/icon-linkedin.svg" alt="" /></a>
+      <a href="https://www.instagram.com/mathbecsan/" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/icon-instagram.svg" alt="" /></a>
+      <a href="https://github.com/mathbecsan" target="_blank" rel="noopener" aria-label="GitHub"><img src="assets/icon-github.svg" alt="" /></a>
+      <a href="https://x.com/mathbecsan" target="_blank" rel="noopener" aria-label="Twitter/X"><img src="assets/icon-twitter.svg" alt="" /></a>
+    </div>
     <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
       <span class="icon">🌙</span>
     </button>
   </header>
 
   <main id="content">
-    <section class="section pad-lg">
-      <div class="container narrow stack-md">
-        <h1>Let’s build something great</h1>
-        <p class="max-70ch">Send a note about your project, timeline, or questions. I’ll get back within 2 business days.</p>
+    <section class="section pad-xl contact-hero">
+      <div class="container center stack-sm">
+        <h1 class="display">Let’s Work Together</h1>
+        <p class="max-70ch">Have a project in mind? Tell me a bit about it and your goals. I typically respond within 24 hours on weekdays.</p>
+      </div>
+    </section>
 
-        <form id="contactForm" class="form stack-md" novalidate>
-          <div class="field">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required aria-required="true" autocomplete="name" />
-            <small class="error" id="nameError" role="alert"></small>
+    <section class="section pad-lg">
+      <div class="container contact-grid">
+        <aside class="info-card stack-md" aria-label="Ways to contact">
+          <div class="info-item">
+            <div class="info-icon">✉️</div>
+            <div>
+              <h3>Email Me</h3>
+              <p><a class="link" href="mailto:mathbecsan@gmail.com">mathbecsan@gmail.com</a></p>
+              <small>Usually within 24h</small>
+            </div>
           </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required aria-required="true" autocomplete="email" />
-            <small class="error" id="emailError" role="alert"></small>
+          <div class="info-item">
+            <div class="info-icon">💬</div>
+            <div>
+              <h3>Let’s Chat</h3>
+              <p>Happy to schedule a quick intro call.</p>
+            </div>
           </div>
+          <div class="info-list">
+            <h3>What to expect</h3>
+            <ul role="list" class="tick-list">
+              <li>Quick response</li>
+              <li>Short discovery call</li>
+              <li>Clear proposal & timeline</li>
+              <li>Regular updates throughout</li>
+            </ul>
+          </div>
+        </aside>
+
+        <form id="contactForm" class="form card pad-md stack-md" novalidate>
+          <div class="grid form-grid-2">
+            <div class="field">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required aria-required="true" autocomplete="name" />
+              <small class="error" id="nameError" role="alert"></small>
+            </div>
+            <div class="field">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required aria-required="true" autocomplete="email" />
+              <small class="error" id="emailError" role="alert"></small>
+            </div>
+            <div class="field">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" autocomplete="organization" />
+            </div>
+            <div class="field">
+              <label for="budget">Budget Range</label>
+              <select id="budget" name="budget">
+                <option value="" selected>Select budget range</option>
+                <option value="<5k">Under $5k</option>
+                <option value="5-10k">$5k–$10k</option>
+                <option value="10-25k">$10k–$25k</option>
+                <option value=">25k">$25k+</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="segmented" role="tablist" aria-label="Project preference">
+            <button class="seg" role="tab" aria-selected="true" data-mode="design">Design</button>
+            <button class="seg" role="tab" aria-selected="false" data-mode="tech">Tech</button>
+          </div>
+
           <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required aria-required="true"></textarea>
+            <label for="projectType">Project Type</label>
+            <select id="projectType" name="projectType">
+              <option value="" selected>Select project type</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="6" required aria-required="true" placeholder="Tell me about your project, goals, and timeline..."></textarea>
             <small class="error" id="messageError" role="alert"></small>
           </div>
+
           <button type="submit" class="btn btn-primary">Send Message</button>
           <p class="form-status" id="formStatus" aria-live="polite"></p>
         </form>
+      </div>
 
-        <div class="alt-contact">
-          <a class="link" href="mailto:mathbecsan@gmail.com">mathbecsan@gmail.com</a>
-          <span> · </span>
-          <a class="link" href="https://www.linkedin.com/in/mathbecsan/" target="_blank" rel="noopener">LinkedIn</a>
-          <span> · </span>
-          <a class="link" href="https://github.com/mathbecsan" target="_blank" rel="noopener">GitHub</a>
+      <div class="container contact-cta center">
+        <div class="card pad-lg stack-sm">
+          <h3>Prefer a different way to connect?</h3>
+          <p>Find me on social or send a direct email.</p>
+          <div class="socials">
+            <a href="mailto:mathbecsan@gmail.com" aria-label="Email">✉️</a>
+            <a href="https://www.linkedin.com/in/mathbecsan/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          </div>
         </div>
       </div>
     </section>
