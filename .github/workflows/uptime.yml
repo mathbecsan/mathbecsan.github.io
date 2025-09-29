@@ -1,0 +1,39 @@
+name: Uptime Monitor
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"  # every 10 minutes
+  workflow_dispatch:
+
+jobs:
+  ping:
+    name: Check site availability
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        url: ["https://mathbecsan.com", "https://www.mathbecsan.com"]
+    steps:
+      - name: Curl ${{ matrix.url }}
+        run: |
+          set -e
+          echo "Checking ${{ matrix.url }}"
+          code=$(curl -s -o /dev/null -w "%{http_code}" ${{ matrix.url }})
+          echo "HTTP $code"
+          if [ "$code" -lt 200 ] || [ "$code" -ge 400 ]; then
+            echo "::error title=Uptime check failed::${{ matrix.url }} returned HTTP $code"
+            exit 1
+          fi
+      - name: Verify provider headers
+        run: |
+          set -e
+          echo "Verifying headers for ${{ matrix.url }}"
+          headers=$(curl -I -s ${{ matrix.url }})
+          echo "$headers"
+          # Accept either GitHub/Pages direct or a redirect from www->apex
+          if ! echo "$headers" | grep -qiE "^server: (GitHub|GitHub\.com|Vercel)"; then
+            if echo "$headers" | grep -qiE "^location: https://mathbecsan.com/?$"; then
+              echo "Got expected redirect to apex."
+            else
+              echo "::warning title=Unexpected headers::$headers"
+            fi
+          fi
