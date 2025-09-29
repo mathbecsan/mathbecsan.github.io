@@ -23,6 +23,21 @@
     const a = e.target.closest('a[href^="#"]');
     if (!a) return;
     const id = a.getAttribute('href').slice(1);
+    // If this is the home-about toggle, handle collapsible behavior
+    if (a.dataset.toggle === 'home-about') {
+      const sec = document.getElementById(id);
+      if (!sec) return;
+      e.preventDefault();
+      const isOpen = sec.classList.toggle('is-open');
+      // Height animation
+      if (isOpen) {
+        sec.style.maxHeight = sec.scrollHeight + 'px';
+        sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        sec.style.maxHeight = '';
+      }
+      return;
+    }
     const el = document.getElementById(id);
     if (!el) return;
     e.preventDefault();

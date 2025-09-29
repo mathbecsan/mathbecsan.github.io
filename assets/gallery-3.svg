@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-label="Gallery placeholder 3">
+  <rect width="1200" height="800" fill="#0f1115"/>
+  <rect x="80" y="80" width="1040" height="640" rx="18" fill="#111827"/>
+  <g fill="none" stroke="#7ee787" stroke-width="14" opacity="0.6">
+    <circle cx="360" cy="360" r="120"/>
+    <circle cx="780" cy="440" r="160"/>
+  </g>
+</svg>

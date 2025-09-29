@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-label="The Quechua Alliance">
+  <rect width="1200" height="750" rx="24" fill="#ffffff"/>
+  <g transform="translate(600,370)">
+    <polygon points="0,-220 220,120 -220,120" fill="#8B5CF6"/>
+    <polygon points="0,-190 190,110 -190,110" fill="#F43F5E"/>
+    <polygon points="0,-160 160,100 -160,100" fill="#F59E0B"/>
+    <polygon points="0,-130 130,90 -130,90" fill="#10B981"/>
+  </g>
+  <text x="600" y="620" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="44" fill="#111827">The Quechua Alliance</text>
+</svg>

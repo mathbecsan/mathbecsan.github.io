@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-label="Unicode Silicon Initiative">
+  <rect width="1200" height="750" rx="24" fill="#4F46E5"/>
+  <g fill="#ffffff">
+    <rect x="220" y="240" width="760" height="270" rx="28" opacity="0.12"/>
+    <text x="600" y="410" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="180" font-weight="800">UN</text>
+  </g>
+  <text x="600" y="560" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="44" fill="#ffffff" opacity="0.9">Unicode Silicon Initiative</text>
+</svg>
