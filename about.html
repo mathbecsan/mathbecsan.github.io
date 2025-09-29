@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Mathias Becerra — Product Designer & Full-Stack Developer." />
+  <title>About — Mathias Becerra</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.svg" alt="Mathias Becerra logo" width="28" height="28" />
+      <span>Mathias Becerra</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="work.html">Work</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="icon">🌙</span>
+    </button>
+  </header>
+
+  <main id="content">
+    <section class="section pad-lg">
+      <div class="container grid about-grid" data-reveal>
+        <div class="about-photo">
+          <img src="assets/headshot.svg" alt="Headshot placeholder for Mathias Becerra" />
+        </div>
+        <div class="about-copy stack-md">
+          <h1>Hi, I’m Mathias.</h1>
+          <p class="lead max-70ch">I design and build digital products that balance business goals with user needs. My approach blends strategy, research, prototyping, and implementation to deliver end‑to‑end experiences.</p>
+          <p>Previously, I’ve worked across startups and agencies, partnering with cross‑functional teams to ship outcomes—not just outputs. I care deeply about accessibility, performance, and craft.</p>
+          <div class="skills">
+            <h2>Skills</h2>
+            <ul class="pill-list" role="list">
+              <li>Product Strategy</li>
+              <li>UX Research</li>
+              <li>Interaction Design</li>
+              <li>Design Systems</li>
+              <li>Prototyping</li>
+              <li>HTML/CSS/JS</li>
+              <li>Accessibility (WCAG)</li>
+              <li>Performance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pad-lg">
+      <div class="container narrow stack-md" data-reveal>
+        <h2>Design Philosophy</h2>
+        <p class="max-70ch">Great products are stories well told. I start with the user’s narrative—motivations, constraints, and context—then shape interfaces that make complex things feel simple. I prefer shipping small, sharp improvements rapidly over big‑bang releases.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> Mathias Becerra</p>
+      <div class="socials">
+        <a href="mailto:hello@example.com" aria-label="Email">✉️</a>
+        <a href="https://www.linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+        <a href="https://github.com" aria-label="GitHub" target="_blank" rel="noopener">GH</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

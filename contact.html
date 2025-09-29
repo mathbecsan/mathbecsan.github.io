@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Mathias Becerra — Let’s work together." />
+  <title>Contact — Mathias Becerra</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.svg" alt="Mathias Becerra logo" width="28" height="28" />
+      <span>Mathias Becerra</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="work.html">Work</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="icon">🌙</span>
+    </button>
+  </header>
+
+  <main id="content">
+    <section class="section pad-lg">
+      <div class="container narrow stack-md">
+        <h1>Let’s build something great</h1>
+        <p class="max-70ch">Send a note about your project, timeline, or questions. I’ll get back within 2 business days.</p>
+
+        <form id="contactForm" class="form stack-md" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required aria-required="true" autocomplete="name" />
+            <small class="error" id="nameError" role="alert"></small>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required aria-required="true" autocomplete="email" />
+            <small class="error" id="emailError" role="alert"></small>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required aria-required="true"></textarea>
+            <small class="error" id="messageError" role="alert"></small>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-status" id="formStatus" aria-live="polite"></p>
+        </form>
+
+        <div class="alt-contact">
+          <a class="link" href="mailto:hello@example.com">hello@example.com</a>
+          <span> · </span>
+          <a class="link" href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+          <span> · </span>
+          <a class="link" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> Mathias Becerra</p>
+      <div class="socials">
+        <a href="mailto:hello@example.com" aria-label="Email">✉️</a>
+        <a href="https://www.linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+        <a href="https://github.com" aria-label="GitHub" target="_blank" rel="noopener">GH</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

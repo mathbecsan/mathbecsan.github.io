@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Work — Projects and case studies by Mathias Becerra." />
+  <title>Work — Mathias Becerra</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.svg" alt="Mathias Becerra logo" width="28" height="28" />
+      <span>Mathias Becerra</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="work.html" class="active">Work</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="icon">🌙</span>
+    </button>
+  </header>
+
+  <main id="content">
+    <section class="section pad-lg">
+      <div class="container stack-md">
+        <header class="section-header">
+          <h1>Selected Work</h1>
+        </header>
+        <div class="filters" role="tablist" aria-label="Project filters">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-btn" data-filter="ux" role="tab">UX</button>
+          <button class="filter-btn" data-filter="ui" role="tab">UI</button>
+          <button class="filter-btn" data-filter="web" role="tab">Web Dev</button>
+        </div>
+        <div class="grid projects-grid" id="projectsGrid">
+          <article class="card project" data-category="ux web">
+            <img src="assets/project-1.svg" alt="Project Alpha preview" class="card-media" />
+            <div class="card-body">
+              <h3>Alpha Analytics</h3>
+              <p>Real-time analytics platform with a11y-first design system.</p>
+              <a class="btn btn-secondary" href="work/project1.html">View Case Study</a>
+            </div>
+          </article>
+          <article class="card project" data-category="ui">
+            <img src="assets/project-2.svg" alt="Northstar UI preview" class="card-media" />
+            <div class="card-body">
+              <h3>Northstar UI</h3>
+              <p>Design tokens and components for multi-brand interfaces.</p>
+              <a class="btn btn-secondary" href="work/project1.html">View Case Study</a>
+            </div>
+          </article>
+          <article class="card project" data-category="web">
+            <img src="assets/project-3.svg" alt="Mercato storefront preview" class="card-media" />
+            <div class="card-body">
+              <h3>Mercato</h3>
+              <p>Headless commerce storefront with modern interactions.</p>
+              <a class="btn btn-secondary" href="work/project1.html">View Case Study</a>
+            </div>
+          </article>
+          <article class="card project" data-category="ux">
+            <img src="assets/project-4.svg" alt="Research dashboard preview" class="card-media" />
+            <div class="card-body">
+              <h3>InsightLab</h3>
+              <p>Research repository and insights workflow.</p>
+              <a class="btn btn-secondary" href="work/project1.html">View Case Study</a>
+            </div>
+          </article>
+          <article class="card project" data-category="ui web">
+            <img src="assets/project-5.svg" alt="Marketing site preview" class="card-media" />
+            <div class="card-body">
+              <h3>LaunchPad</h3>
+              <p>Marketing site kit with CMS and animation presets.</p>
+              <a class="btn btn-secondary" href="work/project1.html">View Case Study</a>
+            </div>
+          </article>
+          <article class="card project" data-category="web">
+            <img src="assets/project-6.svg" alt="Data viz preview" class="card-media" />
+            <div class="card-body">
+              <h3>Datasketch</h3>
+              <p>Interactive data visualizations and storytelling.</p>
+              <a class="btn btn-secondary" href="work/project1.html">View Case Study</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> Mathias Becerra</p>
+      <div class="socials">
+        <a href="mailto:hello@example.com" aria-label="Email">✉️</a>
+        <a href="https://www.linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+        <a href="https://github.com" aria-label="GitHub" target="_blank" rel="noopener">GH</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
